@@ -23,7 +23,7 @@ app.post('/' , async(req , res)=>{
     const prompt =req.body.input
     const response = await openai.createCompletion({
         model: "text-davinci-003",
-        prompt: prompt? prompt:'say this is an error ', 
+        prompt: prompt? `answer with arabic : ${prompt}`:'say this is an error ', 
         temperature: 0,
         max_tokens: 1292,
         top_p: 1,
